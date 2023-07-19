@@ -1,1 +1,3 @@
-resources :messages
+scope module: :messaging do
+  resources :messages
+end

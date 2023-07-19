@@ -1,1 +1,3 @@
 enforce_dependencies: true
+metadata:
+ automatic_pack_namespace: true
