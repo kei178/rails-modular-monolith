@@ -6,6 +6,8 @@ module Messaging
     def index
       @messages = Message.all
 
+      users = LegacyInterface::LegacyUser.all
+
       render json: @messages
     end
 
