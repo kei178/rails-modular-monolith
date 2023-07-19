@@ -1,3 +1,5 @@
 enforce_dependencies: true
+dependencies:
+  - packs/legacy_interface
 metadata:
  automatic_pack_namespace: true
