@@ -8,6 +8,8 @@
 # List of patterns for folder paths to exclude
 # exclude:
 # - "{bin,node_modules,script,tmp,vendor}/**/*"
+exclude:
+  - "db/seeds.rb"
 
 # Patterns to find package configuration files
 # package_paths: "**/"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_19_041014) do
+ActiveRecord::Schema.define(version: 2023_07_20_120929) do
 
   create_table "legacy_users", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 2023_07_19_041014) do
   create_table "messages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "legacy_user_id", null: false
+    t.index ["legacy_user_id"], name: "index_messages_on_legacy_user_id"
   end
 
+  add_foreign_key "messages", "legacy_users"
 end

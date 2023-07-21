@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+50.times do
+  legacy_user = LegacyUser.create
+  5.times do
+    Messaging::Message.create(legacy_user: legacy_user)
+  end
+end

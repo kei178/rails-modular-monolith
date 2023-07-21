@@ -4,9 +4,8 @@ module Messaging
 
     # GET /messages
     def index
-      @messages = Message.all
-
-      users = LegacyInterface::LegacyUser.all
+      current_user = LegacyInterface::LegacyUser.sample
+      @messages = Message.where(user_id: current_user.id)
 
       render json: @messages
     end
